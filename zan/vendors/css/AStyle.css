@@ -1,7 +1,16 @@
 div.longinA{
-	height:300px;
+	background:#CAC9CA;
+	height:auto;
+	font-family:"Comic Sans MS";
+	margin:0px auto;
 	padding:5px;
-	width:350px;
+	width:300px;
+}
+
+div.error_mio{
+	text-align:center;
+	margin:0px auto;
+	width:100px;
 }
 
 p.titulo_log{

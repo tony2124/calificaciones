@@ -20,6 +20,14 @@
 		<script type="text/javascript" src="<?php print path("vendors/css/frameworks/foundation/javascripts/jquery.min.js", "zan"); ?>"></script>
 		<script type="text/javascript" src="<?php print path("vendors/css/frameworks/foundation/javascripts/foundation.js", "zan"); ?>"></script>
 
+		<script type="text/javascript">
+    		$(document).ready(function() {
+	          	$('#buttonForModal').click(function() {
+	            	$('#myModal').reveal();
+	     		});
+			});
+		</script>
+
 		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 			<!--[if lt IE 9]>
 			  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,6 +36,17 @@
 	</head>
 
 	<body>
-		<div style="width: 100%; height: 100px; background: black"></div>
+		<div style="width: 100%; height: 100px; background: black; color:white">
+			<?php 
+				if(SESSION('usuario')){
+					print "<div style='float:left;  padding:20px'><b>BIENVENIDO<br>".SESSION('nombre')." ".SESSION('apellido_p')." ".SESSION('apellido_m')."</div>";
+					?>
+						<div style='float:right; padding:20px'>
+							<a type="submit" href="<?php print get('webURL').'/default/logout' ?>" class="large red nice button radius">Cerrar Sesión</a>
+						</div>
+					<?php
+				}
+			 ?>
+		</div>
 
 <?php } ?>
