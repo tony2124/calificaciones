@@ -27,7 +27,14 @@ class Default_Controller extends ZP_Controller {
 
 	public function login($var=null){
 		if(isset($var)){
-			$vars['error']='error';
+			if($var=="error")
+				$vars['error']='error';
+
+			if($var=="error_re")
+				$vars['error_re']='error';
+
+			if($var=="bien")
+				$vars['bien']='bien';
 		}
 		if(SESSION('usuario')){
 			redirect(get('webURL').'/default/Perfil');
@@ -71,7 +78,24 @@ class Default_Controller extends ZP_Controller {
 	}
 
 	public function registrarAlumno(){
-		$consulta = $this->Default_Model->agregaAlumno();
+		$N_control=POST('num_control');
+		$contra=POST('password');
+		$nombre=POST('nombre');
+		$apellido_p=POST('apellido_p');
+		$apellido_m=POST('apellido_m');
+
+		if($N_control == "" || $contra ="" || $nombre="" || $apellido_p="" || $apellido_m=""){
+			redirect(get('webURL').'/default/login/error_re');
+		}
+
+		$consulta = $this->Default_Model->agregaAlumno($N_control,$contra,$nombre,$apellido_p,$apellido_m);
+		
+		if($consulta){
+			redirect(get('webURL').'/default/login/bien');
+		}
+		else{
+			redirect(get('webURL').'/default/login/error_re');
+		}
 	}
 
 

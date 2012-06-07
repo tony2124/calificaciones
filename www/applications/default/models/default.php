@@ -20,8 +20,8 @@ class Default_Model extends ZP_Model {
 		return $this->Db->query("select * from alumnos where numero_control='$u' and clave='$c'");
 	}
 
-	public function agregaAlumno(){
-		
+	public function agregaAlumno($nc,$p,$n,$ap,$am){
+		return $this->Db->query("insert into alumnos values('$nc','$p','$n','$ap','$am')");
 	}
 
 	

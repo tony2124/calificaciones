@@ -1,3 +1,5 @@
+<br>
+<hr></hr>
 <div class="longinA">
 	<p class="titulo_log">Inciar sesión</p>
 	<hr size="3px" color="gray">
@@ -7,36 +9,38 @@
 		<input class="input-text" type="text" name="user" placeholder="Escribe tu usuario">
 		<label>Contraseña: </label>
 		<input class="input-text" type="password" name="password" placeholder="Escribe tu contraseña">
-		<input type="submit" href="#" value="Iniciar" class="nice small radius blue button">
+		<center><input type="submit" value="Iniciar" class="nice small radius green button"></center>
 
 	</form>
-	<?php 
-		if(isset($error)){
-			echo '<div class="alert-box error error_mio"> Error</div>';
-		}
-	 ?>
+	
 
 	<a href='#' data-reveal-id='myModal'>Registrarse...</a><br>
 
-	<div id="myModal" class="reveal-modal" action="<?php print get('webURL').'/default/registrarAlumno' ?>">
-	    <h2>Registrar Alumno</h2>
-	    <form class="nice" method="post">
+	<div style="width:300px;" id="myModal" class="reveal-modal" >
+	    <h3 style="text-align:center">Registrar Alumno</h3>
+	    <form class="nice" method="post" action="<?php print get('webURL').'/default/registrarAlumno' ?>">
 	    	<p class="lead">Número de control: <input  class="input-text" type="text" name="num_control"placeholder="Escribe tu número de control"> </p>
 	   		<p class="lead">Contraseña: <input  class="input-text" type="password" name="password" placeholder="Escribe tu contraseña"> </p>
+	   		<p class="lead">Nombre: <input  class="input-text" type="text" name="nombre" placeholder="Escribe tu número de control"> </p>
 	   		<p class="lead">Apellido Paterno: <input  class="input-text" type="text" name="apellido_p" placeholder="Escribe tu apellido paterno"> </p>
 	   		<p class="lead">Apellido Materno: <input  class="input-text" type="text" name="apellido_m" placeholder="Escribe tu apellido materno"> </p>
-	   		<p class="lead">Periodo actual: <select name="semestre">
-	   		<option active> Elige...</option>
-	   		<option value="primero"> Primero</option>
-	   		<option value="segundo"> Segundo</option>
-	   		<option value="tercero"> Tercero</option>
-	   		<option value="cuarto"> Cuarto</option>
-	   		<option value="quinto"> Quinto</option>
-	   		<option value="sexto"> Sexto</option>
-	   		</select> </p>
 			<center><input type="submit" value="Registrar" class="nice small radius blue button"></center>
 	    </form>
 	   
 	    <a class="close-reveal-modal">&#215;</a>
 	</div>
 </div>
+<br>
+<hr>
+
+<?php 
+		if(isset($error)){
+			echo '<div class="alert-box error error_mio"> Error al iniciar sesión, intente de nuevo porfavor <a href="#" class="close">&times;</a></div>';
+		}
+		if(isset($error_re)){
+			echo '<div class="alert-box error error_mio"> Error al registrar, intente de nuevo porfavor <a href="#" class="close">&times;</a></div>';
+		}
+		if(isset($bien)){
+			echo '<div class="alert-box  success error_mio"> Se ha hecho el registro correctamente <a href="#" class="close">&times;</a></div>';
+		}
+	 ?>
