@@ -3,6 +3,9 @@
 		die("Error: You don't have permission to access here..."); 
 	}
 ?>
-<div class="span10">
-	<?php $this->load(isset($view) ? $view : NULL, TRUE); ?>
+<div class="content" align="center">
+
+	<div>
+		<?php $this->load(isset($view) ? $view : NULL, TRUE); ?>
+	</div>
 </div>
