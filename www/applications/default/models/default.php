@@ -18,7 +18,10 @@ class Default_Model extends ZP_Model {
 
 	public function verifica_log($u,$c){
 		return $this->Db->query("select * from alumnos where numero_control='$u' and clave='$c'");
+	}
 
+	public function agregaAlumno(){
+		
 	}
 
 	

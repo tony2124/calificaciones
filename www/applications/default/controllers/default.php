@@ -69,5 +69,9 @@ class Default_Controller extends ZP_Controller {
 		$this->render('content',$vars);
 	}
 
+	public function registrarAlumno(){
+		$consulta = $this->Default_Model->agregaAlumno();
+	}
+
 
 }
