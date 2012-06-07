@@ -36,6 +36,7 @@ class Default_Controller extends ZP_Controller {
 		$this->render('content',$vars);
 	}
 
+
 	public function verificar_login(){
 		$usuario=POST('user');
 		$clave=POST('password');
@@ -72,6 +73,7 @@ class Default_Controller extends ZP_Controller {
 	public function registrarAlumno(){
 		$consulta = $this->Default_Model->agregaAlumno();
 	}
+
 
 
 }
