@@ -30,5 +30,9 @@ class Default_Controller extends ZP_Controller {
 		$this->render('content',$vars);
 	}
 
+	public function loginProfesor()
+	{
+		
+	}
 
 }
