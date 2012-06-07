@@ -23,16 +23,6 @@ class Default_Controller extends ZP_Controller {
 		$this->render("content", $vars);
 	}
 
-	public function test($param1 = "Hola", $param2 = "Adios") {
-		print "New dispatcher it's works fine: $param1, $param2";
-	}
-
-	public function show($message) {
-		$vars["message"] = $message;
-		$vars["view"]	 = $this->view("show", TRUE);
-		
-		$this->render("content", $vars);
-		#$this->view("show", $vars);
-	}
+	
 
 }
