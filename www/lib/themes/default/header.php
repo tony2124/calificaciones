@@ -12,6 +12,8 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<title><?php print $this->getTitle(); ?></title>
+
+		<link rel="stylesheet" type="text/css" href="<?php print path("vendors/css/AStyle.css","zan"); ?>">
 		
 		<link href="<?php print path("vendors/css/frameworks/bootstrap/bootstrap.min.css", "zan"); ?>" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/style.css" rel="stylesheet">

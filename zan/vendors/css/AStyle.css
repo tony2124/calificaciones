@@ -1,0 +1,20 @@
+div.longinA{
+	background:#EEEEEE;
+	height:300px;
+	padding:5px;
+	width:350px;
+}
+
+div.log_Iz{
+	float:left;
+	width:50px;
+}
+
+div.log_der{
+	float:right;
+	width:200px;
+}
+
+p.titulo_log{
+	font-size:2em;
+}

@@ -9,7 +9,7 @@ if(!defined("_access")) {
 /**
  * Website
  */
-$ZP["webURL"] 	    = "http://127.0.0.1/ZanPHP";
+$ZP["webURL"] 	    = "http://localhost/calificaciones";
 $ZP["webName"] 	    = "ZanPHP";
 $ZP["webTheme"]     = "default";
 $ZP["webSituation"] = "Active";
@@ -21,7 +21,7 @@ $ZP["benchMark"]    = FALSE;
  */
 $ZP["production"] = FALSE;
 $ZP["domain"] 	  = FALSE;
-$ZP["modRewrite"] = FALSE;
+$ZP["modRewrite"] = TRUE;
 $ZP["autoRender"] = TRUE;
 
 /**
