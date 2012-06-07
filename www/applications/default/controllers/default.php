@@ -84,11 +84,13 @@ class Default_Controller extends ZP_Controller {
 		$apellido_p=POST('apellido_p');
 		$apellido_m=POST('apellido_m');
 
-		if($N_control == "" || $contra ="" || $nombre="" || $apellido_p="" || $apellido_m=""){
+
+
+		if($N_control == "" || $contra =="" || $nombre=="" || $apellido_p=="" || $apellido_m==""){
 			redirect(get('webURL').'/default/login/error_re');
 		}
 
-		$consulta = $this->Default_Model->agregaAlumno($N_control,$contra,$nombre,$apellido_p,$apellido_m);
+		print $consulta = $this->Default_Model->agregaAlumno($N_control,$contra,$nombre,$apellido_p,$apellido_m);
 		
 		if($consulta){
 			redirect(get('webURL').'/default/login/bien');

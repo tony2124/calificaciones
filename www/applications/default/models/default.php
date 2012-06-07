@@ -21,7 +21,9 @@ class Default_Model extends ZP_Model {
 	}
 
 	public function agregaAlumno($nc,$p,$n,$ap,$am){
-		return $this->Db->query("insert into alumnos values('$nc','$p','$n','$ap','$am')");
+		$q = "insert into alumnos values('$nc','$p','$n','$ap','$am')";
+		$this->Db->query($q);
+		return $q;
 	}
 
 	
