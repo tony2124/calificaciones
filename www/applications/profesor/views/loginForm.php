@@ -54,6 +54,9 @@
 	   		<p class="lead">Apellido Materno: 
 	   			<input  class="input-text" type="text" name="am" placeholder="Escribe tu apellido materno"> 
 	   		</p>
+	   		<p class="lead">Grado 
+	   			<input  class="input-text small" type="text" name="grado" placeholder="Escribe tu grado"> 
+	   		</p>
 			<center>
 				<input type="submit" value="Registrar" class="nice small radius green button">
 			</center>

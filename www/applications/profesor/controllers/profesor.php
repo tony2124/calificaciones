@@ -57,6 +57,7 @@ class Profesor_Controller extends ZP_Controller {
 		$vars['nombre'] = POST('nombre');
 		$vars['ap'] = POST('ap');
 		$vars['am'] = POST('am');
+		$vars['grado'] = POST('grado');
 		$this->Profesor_Model->pushProfesor($vars);
 		redirect(get('webURL')._sh.'profesor/login');
 

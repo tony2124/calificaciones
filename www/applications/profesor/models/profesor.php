@@ -25,7 +25,7 @@ class Profesor_Model extends ZP_Model {
 	}
 	public function pushProfesor($vars)
 	{
-		return $this->Db->query("insert into profesores values('$vars[id]','$vars[usuario]','$vars[clave]','$vars[nombre]','$vars[ap]','$vars[am]')");
+		return $this->Db->query("insert into profesores values('$vars[id]','$vars[usuario]','$vars[clave]','$vars[nombre]','$vars[ap]','$vars[am]','$vars[grado]')");
 	}
 
 	public function getMaterias($anio)
