@@ -27,14 +27,6 @@ class Profesor_Controller extends ZP_Controller {
 		$this->render('content',$vars);
 	}
 
-	public function registro()
-	{
-		if(!SESSION('id')) redirect(get('webURL')._sh.'profesor/login');
-		
-		$vars['view']=$this->view('registroForm',true);
-		$this->render('content',$vars);
-	}
-
 	public function iniciandosesion()
 	{
 		$usuario = POST('usuario');
@@ -50,10 +42,49 @@ class Profesor_Controller extends ZP_Controller {
 		{
 			SESSION('nombre', $data[0]['nombre_profesor']);
 			SESSION('ap', $data[0]['ap_profesor']);
-			SESSION('nombre', $data[0]['am_profesor']);
+			SESSION('am', $data[0]['am_profesor']);
 			SESSION('id', $data[0]['id_profesor']);
+			SESSION('anio', $data[0]['anio_profesor']);
 			redirect(get('webURL')._sh.'profesor/calificaciones');
 		}
+	}
+
+	public function registrandoProfesor()
+	{
+		$vars['id'] = uniqid();
+		$vars['usuario'] = POST('usuario');
+		$vars['clave'] = POST('clave');
+		$vars['nombre'] = POST('nombre');
+		$vars['ap'] = POST('ap');
+		$vars['am'] = POST('am');
+		$this->Profesor_Model->pushProfesor($vars);
+		redirect(get('webURL')._sh.'profesor/login');
+
+	}
+
+	public function calificaciones($anio = NULL, $materia = NULL)
+	{
+		if(!SESSION('id')) redirect(get('webURL')._sh.'profesor/login');
+		$vars['view'] = $this->view('calificaciones', true);
+		if($anio)
+		{
+			$vars['anio'] = $anio;
+			$vars['materias'] = $this->Profesor_Model->getMaterias($anio);
+		}
+
+		if($materia)
+		{
+			$vars['idmateria'] = $materia;
+			$vars['alumnos'] = $this->Profesor_Model->getAlumnosInscritos($materia);
+		}
+		
+		$this->render('content', $vars);
+	}
+
+	public function logout()
+	{
+		unsetsessions();
+		redirect(get('webURL')._sh.'profesor/login');
 	}
 
 }

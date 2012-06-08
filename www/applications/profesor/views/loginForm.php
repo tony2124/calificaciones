@@ -24,7 +24,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<a href="<?php print get('webURL')._sh.'profesor/registrorm' ?>">Regístrate</a>
+			<a href="#"  data-reveal-id='myModal'>Regístrate</a>
 		</form>
 		 <hr>
 		 <?php if(isset($error)) { ?>
@@ -35,5 +35,30 @@
 		 <?php } ?>
 	</div>
    </div>
+
+   <div id="myModal" class="reveal-modal" style="width: 300px; margin-left: -200px; top: 0px">
+	    <h4>Registro de Profesores</h4>
+	    <form class="nice" method="post" action="<?php print get('webURL')._sh.'profesor/registrandoProfesor' ?>">
+	    	<p class="lead">Usuario: 
+	    		<input  class="input-text" type="text" name="usuario" placeholder="Escribe el usuario"> 
+	    	</p>
+	   		<p class="lead">Contraseña: 
+	   			<input  class="input-text" type="password" name="clave" placeholder="Escribe tu contraseña"> 
+	   		</p>
+	   		<p class="lead">Nombre: 
+	    		<input  class="input-text" type="text" name="nombre" placeholder="Escribe tu nombre"> 
+	    	</p>
+	   		<p class="lead">Apellido Paterno: 
+	   			<input  class="input-text" type="text" name="ap" placeholder="Escribe tu apellido paterno"> 
+	   		</p>
+	   		<p class="lead">Apellido Materno: 
+	   			<input  class="input-text" type="text" name="am" placeholder="Escribe tu apellido materno"> 
+	   		</p>
+			<center>
+				<input type="submit" value="Registrar" class="nice small radius green button">
+			</center>
+	    </form>
+	    <a class="close-reveal-modal">&#215;</a>
+	</div>
 
 

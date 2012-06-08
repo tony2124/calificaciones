@@ -30,6 +30,20 @@
 	</head>
 
 	<body>
-		<div style="width: 100%; height: 100px; background: black"></div>
+		<div style="width: 100%; height: 100px; background: black">
+
+		<?php 
+				if(SESSION('id')){ ?>
+					<div style='float:left;  padding:20px; color: white; font-size: 20px;'>
+						<b>¡BIENVENIDO!<hr>
+							Profesor <?php print SESSION('nombre')." ".SESSION('ap')." ".SESSION('am') ?>
+					</div>
+					
+						<div style='float:right; padding:20px'>
+							<a type="submit" href="<?php print get('webURL').'/profesor/logout' ?>" class="large red nice button radius">Cerrar Sesión</a>
+						</div>
+					<?php
+				}
+			 ?></div>
 
 <?php } ?>
