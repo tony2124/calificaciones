@@ -18,11 +18,11 @@
 						<td><center>-- Promedio --</center></td>
 					</tr>
 					<tr>
-						<td><center><?php print $cal['b1']; ?></center></td>
-						<td><center><?php print $cal['b2']; ?></center></td>
-						<td><center><?php print $cal['b3']; ?></center></td>	
-						<td><center><?php print $cal['b4']; ?></center></td>
-						<td><center><?php print $cal['b5']; ?></center></td>
+						<td><center><?php print ($cal['b1']!=0) ? $cal['b1'] : '0' ?></center></td>
+						<td><center><?php print ($cal['b2']!=0) ? $cal['b2'] : '0' ?></center></td>
+						<td><center><?php print ($cal['b3']!=0) ? $cal['b3'] : '0' ?></center></td>	
+						<td><center><?php print ($cal['b4']!=0) ? $cal['b4'] : '0' ?></center></td>
+						<td><center><?php print ($cal['b5']!=0) ? $cal['b5'] : '0' ?></center></td>
 						<?php 
 							$x = $x+($cal['b1']+$cal['b2']+$cal['b3']+$cal['b4']+$cal['b5']);
 						 ?>
