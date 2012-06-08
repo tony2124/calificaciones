@@ -24,11 +24,25 @@
 	   		<p class="lead">Nombre: <input  class="input-text" type="text" name="nombre" placeholder="Escribe tu número de control"> </p>
 	   		<p class="lead">Apellido Paterno: <input  class="input-text" type="text" name="apellido_p" placeholder="Escribe tu apellido paterno"> </p>
 	   		<p class="lead">Apellido Materno: <input  class="input-text" type="text" name="apellido_m" placeholder="Escribe tu apellido materno"> </p>
+	   		<p class="lead">Año inscrito: <input  class="input-text" type="text" name="anio" placeholder="Escribe el año en el que estas inscrito"> </p>
 			<center><input type="submit" value="Registrar" class="nice small radius blue button"></center>
 	    </form>
 	   
 	    <a class="close-reveal-modal">&#215;</a>
 	</div>
+</div>
+<div class="redesSociales">
+	<ul>
+		<li>
+			<img class="red_social" src="<?php print path("images/redessociales/facebook.png","zan"); ?>">
+		</li>
+		<li>
+			<img class="red_social" src="<?php print path("images/redessociales/twitter.png","zan"); ?>">
+		</li>
+		<li>
+			<img class="red_social" src="<?php print path("images/redessociales/utube.png","zan"); ?>">
+		</li>
+	</ul>
 </div>
 <br>
 <hr>
