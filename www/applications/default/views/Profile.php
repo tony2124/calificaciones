@@ -1,7 +1,7 @@
 <br><br>
 <div class="perfil_principal">
 		<div style='width:400px; margin:0px auto;' class='alert-box success'>Estás inscrito en el año: <?php  print SESSION('anio')."</div>";?>
-		<div class='alert-box warning num_c'>Número de control: <?php  print SESSION('usuario')."</div><br>"; $x=0;?><hr>
+		<div style='width:400px; margin:0px auto;' class='alert-box warning'>Número de control: <?php  print SESSION('usuario')."</div><br>"; $x=0;?><hr>
 		
 
 		<?php 
