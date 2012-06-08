@@ -1,5 +1,6 @@
 div.longinA{
 	background:#CAC9CA;
+	border-radius:20px;
 	height:auto;
 	font-family:"Comic Sans MS";
 	margin:0px auto;
@@ -7,10 +8,42 @@ div.longinA{
 	width:300px;
 }
 
+div.redesSociales{
+	margin:0px auto;
+	width:300px;
+}
+
+div.perfil_principal{
+	width:1000px;
+	margin:0px auto;
+}
+
+div.num_c{
+	margin:0px auto;
+	width:400px;
+	-webkit-transition:1s; 
+}
+
+
+img.red_social{
+	width:25px;
+	height:25px;
+	-webkit-transition:1s;
+}
+
+img.red_social:hover{
+	width:50px;
+	height:50px;
+	-webkit-transition:1s;
+}
+li{
+	display:inline;
+}
+
 div.error_mio{
 	text-align:center;
 	margin:0px auto;
-	width:100px;
+	width:350px;
 }
 
 p.titulo_log{
