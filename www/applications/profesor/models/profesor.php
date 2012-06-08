@@ -38,4 +38,9 @@ class Profesor_Model extends ZP_Model {
 		return $this->Db->query("select * from calificaciones natural join materias natural join alumnos where id_materia = '$mat'");
 	}
 	
+	public function updateCal($data, $nc, $mat)
+	{	$q = "update calificaciones set b1 = '$data[0]', b2 = '$data[1]', b3 = '$data[2]', b4 = '$data[3]', b5 = '$data[4]' where numero_control = '$nc' and id_materia = '$mat'";
+		$this->Db->query($q);
+		return $q;
+	}
 }

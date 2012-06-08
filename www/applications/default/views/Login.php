@@ -16,7 +16,7 @@
 
 	<a href='#' data-reveal-id='myModal'>Registrarse...</a><br>
 
-	<div style="width:300px;" id="myModal" class="reveal-modal" >
+	<div style="width:300px; margin-left: -150px; top: 0px;" id="myModal" class="reveal-modal" >
 	    <h3 style="text-align:center">Registrar Alumno</h3>
 	    <form class="nice" method="post" action="<?php print get('webURL').'/default/registrarAlumno' ?>">
 	    	<p class="lead">Número de control: <input  class="input-text" type="text" name="num_control"placeholder="Escribe tu número de control"> </p>

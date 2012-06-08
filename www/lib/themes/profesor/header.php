@@ -36,7 +36,7 @@
 				if(SESSION('id')){ ?>
 					<div style='float:left;  padding:20px; color: white; font-size: 20px;'>
 						<b>¡BIENVENIDO!<hr>
-							Profesor <?php print SESSION('nombre')." ".SESSION('ap')." ".SESSION('am') ?>
+							Profesor <?php print SESSION('nombre_profesor')." ".SESSION('ap')." ".SESSION('am') ?>
 					</div>
 					
 						<div style='float:right; padding:20px'>

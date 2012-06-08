@@ -24,9 +24,9 @@
 						<td><center><?php print ($cal['b4']!=0) ? $cal['b4'] : '0' ?></center></td>
 						<td><center><?php print ($cal['b5']!=0) ? $cal['b5'] : '0' ?></center></td>
 						<?php 
-							$x = $x+($cal['b1']+$cal['b2']+$cal['b3']+$cal['b4']+$cal['b5']);
+							$x = $x+($cal['b1']+$cal['b2']+$cal['b3']+$cal['b4']+$cal['b5'])/5;
 						 ?>
-						<td><center><?php print ($cal['b1']+$cal['b2']+$cal['b3']+$cal['b4']+$cal['b5'])  ?></center></td>
+						<td><center><?php print ($cal['b1']+$cal['b2']+$cal['b3']+$cal['b4']+$cal['b5'])/5  ?></center></td>
 												
 					</tr>
 				</table>
@@ -38,7 +38,7 @@
 	
 			}
 
-			print "<div style='width:400px'class='alert-box success'>Promedio General: ".$x."</div>";
+			print "<div style='width:400px'class='alert-box success'>Promedio General: ".($x/sizeof($calificaciones))."</div>";
 	
 		 ?>
 
